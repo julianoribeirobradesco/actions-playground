@@ -1,0 +1,42 @@
+name: "Exercicio 1 JulianoRibeiro"
+  
+  on:
+    push:
+    
+jobs:
+  print_date_ubuntut:
+    name: Print Date Ubuntu! 
+    runs-on: ubuntu- latest
+
+    steps:
+    name: Print Date Ubuntu! 
+    run: date
+    
+  print_date_windows:
+      name: Print date Windows! 
+      runs-on: windows-latest
+
+  steps:
+    - name: Print date Windows!
+      run: date
+
+  print_date_macos:
+      name: Print Date MacOs! 
+      runs-on: macos-latest 
+
+  steps:
+     - name: Print date MacOs!
+      run: date
+      
+  print_date_final:
+      name: Print Date Final
+      run-on: ubuntu-latest
+      
+      needs:
+      - print_date_ubuntu
+      - print_date_windows
+      - print_date_macos
+      
+    steps:
+    - name: Print date final!
+      run: date
