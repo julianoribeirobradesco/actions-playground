@@ -1,7 +1,7 @@
-name: "Exercicio 1"
+name: "Exercicio 1 JulianoRibeiro"
   
   on:
-    push:
+      push:
     
 jobs:
   print_date_ubuntut:
